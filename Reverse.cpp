@@ -25,6 +25,39 @@ Node* reverse(Node* head)
     head -> next = NULL;
 
     return curr;   
+
+/*
+        Naive Approach
+    vector<int> a;
+
+    for(Node* curr = head; curr != NULL; cur++)
+        a.push_nack(curr -> data);
+
+    for(Node* curr = head; curr != NULL; cur++)
+    {
+        curr -> data = a.back();
+        a.pop();
+    }
+    return head;
+
+    auxiliary space: O(n) and Twice traversal;
+
+        Recursive Approach
+
+    Node* curr = head, *prev = NULL;
+
+    while(curr != NULL)
+    {
+        Node* next = curr -> next;
+        curr -> next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;        //prev is the new head!
+
+    space: O(1), one traversal! 
+
+*/
 }
 
 void printlist(Node* head)
