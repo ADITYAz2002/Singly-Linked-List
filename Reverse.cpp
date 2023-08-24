@@ -31,7 +31,7 @@ Node* reverse(Node* head)
     vector<int> a;
 
     for(Node* curr = head; curr != NULL; cur++)
-        a.push_nack(curr -> data);
+        a.push_back(curr -> data);
 
     for(Node* curr = head; curr != NULL; cur++)
     {
@@ -42,7 +42,7 @@ Node* reverse(Node* head)
 
     auxiliary space: O(n) and Twice traversal;
 
-        Recursive Approach
+        Iterative Approach
 
     Node* curr = head, *prev = NULL;
 
